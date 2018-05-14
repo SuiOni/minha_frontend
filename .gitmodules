@@ -1,0 +1,3 @@
+[submodule "priceline-design-system"]
+	path = priceline-design-system
+	url = https://github.com/pricelinelabs/design-system.git
