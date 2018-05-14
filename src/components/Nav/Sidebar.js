@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import rem from '../../utils/rem';
-import { mediaQueryMinWidthWrap, sizes, fonts, colors } from '../priceline-styled-system/theme';
+import { mediaQueryMinWidthWrap, sizes, fonts, colors } from '../Priceline/theme';
 import captureScroll from '../CaptureScroll/CaptureScroll';
 
 const Sidebar = styled.nav`

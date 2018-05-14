@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '../priceline-styled-system';
-import { mediaQueryMinWidthWrap } from '../priceline-styled-system/theme';
+import { Link } from '../Priceline';
+import { mediaQueryMinWidthWrap } from '../Priceline/theme';
 import { css } from 'styled-components';
 import rem from '../../utils/rem';
 

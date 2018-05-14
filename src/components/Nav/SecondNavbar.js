@@ -5,8 +5,8 @@ import Img from 'gatsby-image';
 import GatsbyLink from 'gatsby-link';
 
 import rem from '../../utils/rem';
-import { mediaQueryMinWidthWrap, colors, sizes } from '../priceline-styled-system/theme';
-import { Box, Flex, Text } from '../priceline-styled-system';
+import { mediaQueryMinWidthWrap, colors, sizes } from '../Priceline/theme';
+import { Box, Flex, Text } from '../Priceline';
 
 import { CloseIcon, FoldIcon, ArrowIcon } from './NavIcons';
 import Link from '../Link/LinkPD';

@@ -4,8 +4,8 @@ import PostListing from '../components/PostListing/PostListing';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import SecondNavbar from '../components/Nav/SecondNavbar';
-import { Text } from '../components/priceline-styled-system';
-import { colors } from '../components/priceline-styled-system/theme';
+import { Text } from '../components/Priceline';
+import { colors } from '../components/Priceline/theme';
 
 const Journal = ({ data, isSecondNavFolded, secondNavColor, navBarSecondData, isWorkOpen, toggleWork }) => {
   // const postEdges = data.allMarkdownRemark.edges;

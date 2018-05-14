@@ -8,8 +8,8 @@ import config from '../../data/SiteConfig';
 import SecondNavbar from '../components/Nav/SecondNavbar';
 import NavLink from '../components/Nav/NavLink';
 import NavSeperatorLine from '../components/Nav/NavSeparatorLine';
-import { Text } from '../components/priceline-styled-system';
-import { colors } from '../components/priceline-styled-system/theme';
+import { Text } from '../components/Priceline';
+import { colors } from '../components/Priceline/theme';
 
 const Project = ({ data, isSecondNavFolded, secondNavColor, navBarSecondData, isWorkOpen, toggleWork }) => {
   // const postEdges = data.allMarkdownRemark.edges;

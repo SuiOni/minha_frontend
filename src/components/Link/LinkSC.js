@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import UnstyledLink from 'gatsby-link';
 
 import rem from '../../utils/rem';
-import theme from '../priceline-styled-system/theme';
+import theme from '../Priceline/theme';
 
 const { violetRed, lightGrey } = theme;
 

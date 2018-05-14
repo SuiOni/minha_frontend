@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import rem from '../../utils/rem';
-import { sizes } from '../priceline-styled-system/theme';
+import { sizes } from '../Priceline/theme';
 
 const LogoDiv = styled.div`
   display: inline-block;

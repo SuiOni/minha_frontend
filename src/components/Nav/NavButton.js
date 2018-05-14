@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import rem from '../../utils/rem';
-import { sizes } from '../priceline-styled-system/theme';
+import { sizes } from '../Priceline/theme';
 import { resetInput } from '../../utils/form';
 
 const NavButton = styled.button`

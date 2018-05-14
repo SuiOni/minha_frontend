@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import rem from '../../utils/rem';
-import { sizes } from '../priceline-styled-system/theme';
+import { sizes } from '../Priceline/theme';
 import Link from '../Link/LinkPD';
 
 const Wrapper = styled.nav`

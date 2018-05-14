@@ -5,8 +5,8 @@ import GatsbyLink from 'gatsby-link';
 import { themeGet, fontSize, fontWeight } from 'styled-system';
 
 import rem from '../../utils/rem';
-import { sizes, colors, mediaQueryMinWidthWrap } from '../priceline-styled-system/theme';
-import { Link } from '../priceline-styled-system';
+import { sizes, colors, mediaQueryMinWidthWrap } from '../Priceline/theme';
+import { Link } from '../Priceline';
 import NavSeparator from './NavSeparator';
 import NavLink from './NavLink';
 

@@ -6,10 +6,10 @@ import PostListing from '../../../components/PostListing/PostListing';
 import SEO from '../../../components/SEO/SEO';
 import config from '../../../../data/SiteConfig';
 import SecondNavbar from '../../../components/Nav/SecondNavbar';
-import { Text } from '../../../components/priceline-styled-system';
+import { Text } from '../../../components/Priceline';
 import NavSeperatorLine from '../../../components/Nav/NavSeparatorLine';
 import NavLink from '../../../components/Nav/NavLink';
-import { colors } from '../../../components/priceline-styled-system/theme';
+import { colors } from '../../../components/Priceline/theme';
 
 const Matter = ({ data, isSecondNavFolded, secondNavColor, navBarSecondData, navLogo, isWorkOpen, toggleWork }) => {
   // const postEdges = data.allMarkdownRemark.edges;

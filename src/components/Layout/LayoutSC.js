@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import rem from '../../utils/rem';
-import { fonts, sizes, mediaQueryMinWidthWrap } from '../priceline-styled-system/theme';
+import { fonts, sizes, mediaQueryMinWidthWrap } from '../Priceline/theme';
 
 export const Container = styled.div`
   padding-left: 0;

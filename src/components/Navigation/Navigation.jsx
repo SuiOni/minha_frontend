@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text, Icon } from '../priceline-styled-system';
+import { Flex, Text, Icon } from '../Priceline';
 
 const Navigation = () => (
   <Flex p={2} align="center" color="white" bg="blue">

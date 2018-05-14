@@ -4,7 +4,7 @@ import GatsbyLink from 'gatsby-link';
 
 import rem from '../../utils/rem';
 import Link from '../Link/LinkPD';
-import { mediaQueryMinWidthWrap } from '../priceline-styled-system/theme';
+import { mediaQueryMinWidthWrap } from '../Priceline/theme';
 
 const LogoLink = styled(GatsbyLink).attrs({
   to: '/',

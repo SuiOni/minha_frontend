@@ -14,8 +14,8 @@ import config from '../../data/SiteConfig';
 import { Content } from '../components/Layout/LayoutSC';
 // import Navigation from '../components/Navigation';
 // import Footer from '../components/Footer';
-import { ThemeProvider, theme } from '../components/priceline-styled-system';
-import { mediaQueryMinWidthWrap, sizes, colors } from '../components/priceline-styled-system/theme';
+import { ThemeProvider, theme } from '../components/Priceline';
+import { mediaQueryMinWidthWrap, sizes, colors } from '../components/Priceline/theme';
 import rem from '../utils/rem';
 
 const navBarSecondData = {
