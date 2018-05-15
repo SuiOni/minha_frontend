@@ -95,8 +95,8 @@ const darkOrange = '#a50';
 const lightPurple = '#ecf';
 const purple = '#70b'; // secondary
 const darkPurple = '#407';
-// COLORS for the NAV and Websites
 
+// COLORS for the NAV and Websites
 const vision = '#FC3BA3';
 const work = '#FCE89F';
 const journal = '#9FFCA8';

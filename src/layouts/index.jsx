@@ -14,8 +14,8 @@ import config from '../../data/SiteConfig';
 import { Content } from '../components/Layout/LayoutSC';
 // import Navigation from '../components/Navigation';
 // import Footer from '../components/Footer';
-import { ThemeProvider, theme } from '../components/Priceline';
-import { mediaQueryMinWidthWrap, sizes, colors } from '../components/Priceline/theme';
+import { ThemeProvider } from '../components/Priceline';
+import theme, { mediaQueryMinWidthWrap, sizes, colors } from '../components/Priceline/theme';
 import rem from '../utils/rem';
 
 const navBarSecondData = {
@@ -121,14 +121,14 @@ const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: ${theme.colors.grey};
-  background: ${theme.colors.paleGrey};
+  color: ${colors.grey};
+  background: ${colors.paleGrey};
   box-sizing: border-box;
   margin-top: ${rem(50)};
 `;
 
 const FooterLink = styled(Link)`
-  color: ${theme.colors.grey};
+  color: ${colors.grey};
 `;
 
 const FooterContent = styled(Content)`
