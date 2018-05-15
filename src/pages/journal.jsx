@@ -8,7 +8,7 @@ import { Text } from '../components/Priceline';
 import { colors } from '../components/Priceline/theme';
 
 const Journal = ({ data, isSecondNavFolded, secondNavColor, navBarSecondData, isWorkOpen, toggleWork }) => {
-  // const postEdges = data.allMarkdownRemark.edges;
+  const postEdges = data.allMarkdownRemark.edges;
   console.log(
     'data, isSecondNavFolded, secondNavColor, navBarSecondData',
     data,
@@ -31,8 +31,8 @@ const Journal = ({ data, isSecondNavFolded, secondNavColor, navBarSecondData, is
         </Text>
       </SecondNavbar>
 
-      {/* <SEO postEdges={postEdges} /> */}
-      {/* <PostListing postEdges={postEdges} /> */}
+      <SEO postEdges={postEdges} />
+      <PostListing postEdges={postEdges} />
     </div>
   );
 };
@@ -40,24 +40,29 @@ const Journal = ({ data, isSecondNavFolded, secondNavColor, navBarSecondData, is
 export default Journal;
 
 /* eslint no-undef: "off" */
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           fields {
-//             slug
-//           }
-//           excerpt
-//           timeToRead
-//           frontmatter {
-//             title
-//             tags
-//             cover
-//             date
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "journal" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            collection
+          }
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover
+            date
+          }
+        }
+      }
+    }
+  }
+`;

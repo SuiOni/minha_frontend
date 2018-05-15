@@ -5,8 +5,8 @@ const webpackLodashPlugin = require('lodash-webpack-plugin');
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
-  if (node.internal.type === 'MarkdownRemark') {
-    const fileNode = getNode(node.parent);
+  if (_.get(node, 'internal.type') === 'MarkdownRemark') {
+    const fileNode = getNode(_.get(node, 'parent'));
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
@@ -27,6 +27,11 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${_.kebabCase(node.frontmatter.slug)}`;
     }
     createNodeField({ node, name: 'slug', value: slug });
+    createNodeField({
+      node,
+      name: 'collection',
+      value: _.get(fileNode, 'sourceInstanceName'),
+    });
   }
 };
 
@@ -38,25 +43,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const tagPage = path.resolve('src/templates/tag.jsx');
     const categoryPage = path.resolve('src/templates/category.jsx');
     resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark {
-              edges {
-                node {
-                  frontmatter {
-                    tags
-                    category
-                  }
-                  fields {
-                    slug
-                  }
+      graphql(`
+        {
+          allMarkdownRemark(filter: { fields: { collection: { eq: "journal" } } }) {
+            edges {
+              node {
+                frontmatter {
+                  tags
+                  category
+                }
+                fields {
+                  slug
+                  collection
                 }
               }
             }
           }
-        `
-      ).then(result => {
+        }
+      `).then(result => {
         if (result.errors) {
           /* eslint no-console: "off" */
           console.log(result.errors);
@@ -77,7 +81,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
 
           createPage({
-            path: edge.node.fields.slug,
+            path: `/journal${edge.node.fields.slug}`,
             component: postPage,
             context: {
               slug: edge.node.fields.slug,

@@ -178,7 +178,7 @@ class TemplateWrapper extends PureComponent {
       title = 'Categories';
     } else if (currentPath === 'about/') {
       title = 'About';
-    } else if (currentPath.indexOf('posts')) {
+    } else if (currentPath.indexOf('journal')) {
       title = 'Article';
     } else if (currentPath.indexOf('tags/')) {
       const tag = currentPath
@@ -204,11 +204,11 @@ class TemplateWrapper extends PureComponent {
 
   toggleSecondNav = (secondNavColor, fromWork) => {
     console.log('secondNavColor', 'fromWork', secondNavColor, fromWork);
-    const secondNavColorLower = secondNavColor.toLowerCase(); // TODO Error on mainpage becaise ther is no string
+    // const secondNavColorLower = secondNavColor.toLowerCase(); // TODO Error on mainpage becaise ther is no string
 
     this.setState(prevState => ({
-      isSecondNavFolded: prevState.secondNavColor === secondNavColorLower ? !prevState.isSecondNavFolded : false, // close if same,  just change color when different color
-      secondNavColor: secondNavColorLower,
+      isSecondNavFolded: !secondNavColor, // prevState.secondNavColor === secondNavColorLower ? !prevState.isSecondNavFolded : false, // close if same,  just change color when different color
+      secondNavColor,
       isWorkOpen: fromWork,
       isMobileNavFolded: true,
     }));

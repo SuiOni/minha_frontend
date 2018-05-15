@@ -8,6 +8,7 @@ import config from '../../data/SiteConfig';
 
 const PostTemplate = ({ pathContext, data }) => {
   const { slug } = pathContext;
+  console.log('pathContext', pathContext);
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
   if (!post.id) {

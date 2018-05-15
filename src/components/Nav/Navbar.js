@@ -168,7 +168,7 @@ class Navbar extends PureComponent {
       <Wrapper transparent={transparent} align="center" bg="white" width={1} px={3}>
         <NormalNavbar width={1}>
           <StartWrapper>
-            <LogoLink onClick={() => onSecondNavToggle(secondNavColor)}>
+            <LogoLink onClick={() => onSecondNavToggle()}>
               <Logo imgPath={logoMinha}>
                 <Img
                   sizes={

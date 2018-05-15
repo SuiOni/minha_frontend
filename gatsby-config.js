@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
+        name: 'journal',
         path: `${__dirname}/content/${config.blogPostDir}`,
       },
     },
@@ -52,11 +52,10 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe'
+            resolve: 'gatsby-remark-responsive-iframe',
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-autolink-headers'
+          // 'gatsby-remark-copy-linked-files',
+          // 'gatsby-remark-autolink-headers'
         ],
       },
     },
@@ -70,11 +69,12 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
+        trickle: true,
       },
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-twitter',
+    // 'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -139,7 +139,7 @@ module.exports = {
                 author: rssMetadata.author,
                 url: rssMetadata.site_url + edge.node.fields.slug,
                 guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [{ 'content:encoded': edge.node.html }]
+                custom_elements: [{ 'content:encoded': edge.node.html }],
               }));
             },
             query: `
